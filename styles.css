@@ -1,0 +1,261 @@
+/* © Máster en CSS de Victor Robles Web ® https://www.victorroblesweb.es */
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#container {
+    --color-borde1: rgba(225, 225, 226, 0.8);
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid var(--color-borde1);
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 600px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 120px;
+    border-bottom: 1px solid var(--color-borde1);
+}
+
+.logo {
+    flex-grow: 1;
+    flex-basis: 50%;
+    padding: 10px;
+    margin-left: 20px;
+    color: black;
+    text-shadow: 2px 2px 1px #ccc;
+    /* para el footer */
+    font-family: Helvetica;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.logo h1 {
+    font-family: Helvetica;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+#menu {
+    flex-grow: 1;
+    flex-basis: 30%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+#menu>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#menu a {
+    text-transform: uppercase;
+    color: #444;
+    padding: 15px;
+    transition: all 300ms;
+}
+
+#menu a:hover {
+    background-color: var(--color-borde1);
+    border-radius: 10px;
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 15%;
+    margin-right: 30px;
+    padding: 15px
+}
+
+#aside h2 {
+    display: block;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-borde1);
+    text-align: center;
+}
+
+#aside ul {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+#aside ul li {
+    padding-bottom: 20px;
+}
+
+#aside a {
+    display: block;
+    padding: 20px;
+    background-color: #eee;
+    color: #444;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+
+#aside a:hover {
+    background-color: #444;
+    color: #eee;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 80%;
+    justify-content: space-between;
+}
+
+.project {
+    flex-grow: 1;
+    flex-basis: 250px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+}
+
+.project img {
+    width: 100%;
+}
+
+.project-info {
+    padding: 10px;
+}
+
+.project-info a {
+    font-size: 16px;
+    color: black;
+    transition: all 300ms;
+}
+
+.project-info a:hover {
+    color: green;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: grey;
+    transition: all 300ms;
+}
+
+.project-info p:hover {
+    color: red;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 120px;
+    border-top: 1px solid var(--color-borde1);
+}
+
+#footer .logo {
+    opacity: 0.5;
+    flex-basis: auto;
+    flex-grow: 1;
+    order: 2;
+    text-align: right;
+    margin-right: 20px;
+}
+
+#footer .info {
+    flex-grow: 1;
+    order: 1;
+    margin-left: 30px;
+    color: #444;
+}
+
+#footer .info a {
+    color: rgb(9, 74, 255);
+}
+
+@media (max-width: 1190px) {
+    #header {
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+    #menu>ul {
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin: 0px;
+        padding: 0px;
+    }
+    .logo, .logo h1 {
+        font-size: 30px;
+    }
+    #aside {
+        margin: 0px;
+        padding: 10px;
+    }
+    .project {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 672px) {
+    #aside ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-grow: 1;
+        padding: 0px;
+    }
+    #content {
+        flex-direction: column;
+    }
+    #footer .info {
+        order: 2;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        padding-bottom: 20px;
+    }
+    #footer .logo {
+        order: 1;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+        padding-top: 20px;
+        padding: 0px;
+    }
+}
